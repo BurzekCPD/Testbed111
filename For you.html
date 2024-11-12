@@ -49,9 +49,15 @@
                 // Second click: erase the message and show a different text
                 document.getElementById('message').innerText = 'Please click me once more xxx';
             } else if (clickCount === 3) {
-                // Third click: open the YouTube link in a new tab
-                window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
-                console.log("Opening YouTube link");
+                // Third click: erase the second message and redirect to the YouTube link after 1 second
+                document.getElementById('message').innerText = ''; // Clear the message
+                console.log("Opening YouTube link after 1 second delay");
+
+                // Redirect after 1 second delay
+                setTimeout(function() {
+                    window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'; // Redirect to URL
+                }, 1000); // Delay in milliseconds (1 second)
+                
                 // Reset click count to start over
                 clickCount = 0;
             }
