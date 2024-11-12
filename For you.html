@@ -43,13 +43,13 @@
             console.log("Button clicked. Current click count:", clickCount);
 
             if (clickCount === 1) {
-                // First click: display "Hello World"
+                // First click: display "Hello, Erona"
                 document.getElementById('message').innerText = 'Hello, Erona';
             } else if (clickCount === 2) {
-                // Second click: erase the "Hello World" text
+                // Second click: erase the message and show a different text
                 document.getElementById('message').innerText = 'Please click me once more xxx';
             } else if (clickCount === 3) {
-                // Third click: open the YouTube link
+                // Third click: open the YouTube link in a new tab
                 window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
                 console.log("Opening YouTube link");
                 // Reset click count to start over
